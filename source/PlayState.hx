@@ -53,12 +53,13 @@ import StageData;
 import Shaders;
 import FunkinLua;
 import DialogueBoxPsych;
-#if mobileC
-import ui.Mobilecontrols;
-#end
 
 #if MODS_ALLOWED
 import sys.FileSystem;
+#end
+
+#if mobileC
+import ui.Mobilecontrols;
 #end
 
 using StringTools;
@@ -68,10 +69,6 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 	public static var doingreef:Bool = false;
-	
-	#if mobileC
-	var mcontrols:Mobilecontrols; 
-	#end
 
 	//ofs Camera
 	var ofs = 30;
@@ -277,6 +274,10 @@ class PlayState extends MusicBeatState
 	var storyDifficultyText:String = "";
 	var detailsText:String = "";
 	var detailsPausedText:String = "";
+	#end
+	
+	#if mobileC
+	var mcontrols:Mobilecontrols; 
 	#end
 
 	//Achievement shit
