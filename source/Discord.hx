@@ -14,7 +14,6 @@ using StringTools;
 
 class DiscordClient
 {
-	public static var isInitialized:Bool = false;
 	public function new()
 	{
                 #if desktop
