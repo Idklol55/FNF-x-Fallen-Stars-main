@@ -20,7 +20,7 @@ class DiscordClient
                 #if desktop
 		trace("Discord Client starting...");
 		DiscordRpc.start({
-			clientID: "863222024192262205",
+			clientID: "937000702541181018",
 			onReady: onReady,
 			onError: onError,
 			onDisconnected: onDisconnected
@@ -75,7 +75,6 @@ class DiscordClient
 			new DiscordClient();
 		});
 		trace("Discord Client initialized");
-		isInitialized = true;
                 #end
 	}
 
