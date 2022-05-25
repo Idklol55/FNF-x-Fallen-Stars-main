@@ -54,7 +54,7 @@ import Shaders;
 import FunkinLua;
 import DialogueBoxPsych;
 
-#if MODS_ALLOWED
+#if sys
 import sys.FileSystem;
 #end
 
@@ -1863,7 +1863,7 @@ class PlayState extends MusicBeatState
 
 		var songName:String = Paths.formatToSongPath(SONG.song);
 		var file:String = Paths.json(songName + '/events');
-		#if MODS_ALLOWED
+		#if desktop
 		if (FileSystem.exists(Paths.modsJson(songName + '/events')) || FileSystem.exists(file)) {
 		#else
 		if (OpenFlAssets.exists(file)) {
